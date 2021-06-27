@@ -68,6 +68,22 @@ var AutoDeployUnitCRD = RegistCRD{
 														Type:        "string",
 														Description: "value",
 													},
+													"valueFrom": {
+														Type: "object",
+														Properties: map[string]api_x_v1.JSONSchemaProps{
+															"configMapKeyRef": {
+																Type: "object",
+																Properties: map[string]api_x_v1.JSONSchemaProps{
+																	"name": {
+																		Type: "string",
+																	},
+																	"key": {
+																		Type: "string",
+																	},
+																},
+															},
+														},
+													},
 												},
 											},
 										},
