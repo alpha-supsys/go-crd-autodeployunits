@@ -42,7 +42,12 @@ var AutoDeployUnitCRD = RegistCRD{
 										// Nullable: true,
 									},
 									"cmd": {
-										Type: "string",
+										Type: "array",
+										Items: &api_x_v1.JSONSchemaPropsOrArray{
+											Schema: &api_x_v1.JSONSchemaProps{
+												Type: "string",
+											},
+										},
 										// Nullable: true,
 									},
 									"url": {

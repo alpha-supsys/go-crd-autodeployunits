@@ -19,7 +19,7 @@ type AutoDeployUnit struct {
 type AutoDeployUnitSpec struct {
 	Image string `json:"image"`
 	// +optional
-	Cmd string `json:"cmd"`
+	Cmd []string `json:"cmd"`
 	// +optional
 	Url string `json:"url"`
 	// +optional
